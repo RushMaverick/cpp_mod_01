@@ -2,7 +2,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := Zombies
+NAME        := Brain
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -std=c++98
  
@@ -10,7 +10,7 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SRCS        :=      main.cpp Zombie.cpp newZombie.cpp randomChump.cpp\
+SRCS        :=      main.cpp\
                           
 OBJS        := ${SRCS:.cpp=.o}
 
