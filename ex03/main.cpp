@@ -2,7 +2,18 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
+int main(void) {
+	HumanB jeff;
+	Weapon weapon;
+	std::string newWep= "Blade of Eternal Woe and Malice";
 
+	jeff.setWeapon(weapon);
+	jeff.attack();
+	weapon.setType(newWep);
+	jeff.setWeapon(weapon);
+	jeff.attack();
+	return 0;
+}
 /*Now, create two classes: HumanA and HumanB. They both have a Weapon and a
 name. They also have a member function attack() that displays (of course, without the
 angle brackets):

@@ -2,7 +2,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := Brain
+NAME        := Violence
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -std=c++98
  
@@ -10,7 +10,7 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SRCS        :=      main.cpp\
+SRCS        :=      main.cpp HumanB.cpp Weapon.cpp\
                           
 OBJS        := ${SRCS:.cpp=.o}
 
