@@ -5,9 +5,8 @@ void	HumanB::attack() {
 }
 
 
-HumanB::HumanB() {
+HumanB::HumanB(std::string name) : _name(name){
 	_weapon = NULL;
-	_name = "Greg";
 }
 
 HumanB::~HumanB() {

@@ -1,6 +1,18 @@
 #ifndef HUMANAHPP
 #define HUMANAHPP
 
+#include <iostream>
+#include "Weapon.hpp"
+class HumanA {
+	private:
+		std::string _name;
+		Weapon& _weapon;
+	public:
+		HumanA(std::string name, Weapon& weapon);
+		~HumanA();
+		void attack();
+};
+
 #endif
 
 /*Now, create two classes: HumanA and HumanB. They both have a Weapon and a

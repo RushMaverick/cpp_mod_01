@@ -8,8 +8,7 @@ void Weapon::setType(const std::string& newType) {
 	this->_type = newType;
 }
 
-Weapon::Weapon() {
-	_type = "Club";
+Weapon::Weapon(std::string name) : _type(name){
 }
 
 Weapon::~Weapon() {
