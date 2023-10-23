@@ -7,8 +7,22 @@ int main (int argc, char **argv) {
 	}
 	// Open argv[1] using std::ifstream inFile(argv[1])
 	// if inFile fails, tell user to fuck off
-	//
-	// find all occurences of s1 in argv[1]
+	std::ifstream inFile(argv[1]);
+	if (!inFile.is_open()) {
+		std::cout << "Error opening file, try another one." << std::endl;
+		return 1;
+	}
+	std::string outFileName = std::string(argv[1]) + ".replace";
+	std::ofstream outFile(outFileName);
+	std::string line;
+	std::stringstream buffer;
+	buffer << inFile.rdbuf();
+
+	line = buffer.str();
+
+	for (size_t i = 0; i < line.size(); i++) {
+		outFile << line[i];
+	}
 	return 0;
 }
 
