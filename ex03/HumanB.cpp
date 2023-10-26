@@ -13,6 +13,14 @@ HumanB::~HumanB() {
 
 }
 
+HumanB::HumanB(const HumanB &other) {
+	*this = other;
+}
+
+HumanB &HumanB::operator=(const HumanB &other){
+	_name = other._name;
+}
+
 void HumanB::setWeapon(Weapon& weapon) {
 	_weapon = &weapon;
 }
