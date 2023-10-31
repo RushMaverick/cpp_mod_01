@@ -6,7 +6,7 @@ int main(void){
 	std::string &stringREF = str;
 
 	std::cout << "Mem address of str: " << &str << std::endl;
-	std::cout << "Mem address of stringPTR: << " << stringPTR << std::endl;
+	std::cout << "Mem address of stringPTR: " << stringPTR << std::endl;
 	std::cout << "Mem address of stringREF: " << &stringREF << std::endl;
 
 	std::cout << "Value of str: " << str << std::endl;

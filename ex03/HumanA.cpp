@@ -15,6 +15,7 @@ HumanA::~HumanA() {
 HumanA &HumanA::operator=(const HumanA &other){
 	_name = other._name;
 	_weapon = other._weapon;
+	return (*this);
 }
 
 HumanA::HumanA(const HumanA &other) : _weapon(other._weapon) {

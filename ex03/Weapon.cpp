@@ -20,5 +20,6 @@ Weapon::Weapon(const Weapon &other) {
 }
 
 Weapon &Weapon::operator=(const Weapon &other) {
-	*this = other;
+	this->_type = other.getType();
+	return (*this);
 }

@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
 		line.insert(index, s2);
 		pos = index + s2.length();
 	}
-	outFile << line << std::endl;
+	outFile << line;
 	outFile.close();
 	inFile.close();
 	return 0;

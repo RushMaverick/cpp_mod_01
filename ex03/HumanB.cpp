@@ -21,6 +21,7 @@ HumanB::HumanB(const HumanB &other) {
 
 HumanB &HumanB::operator=(const HumanB &other){
 	_name = other._name;
+	return (*this);
 }
 
 void HumanB::setWeapon(Weapon& weapon) {
