@@ -10,6 +10,8 @@ class HumanA {
 	public:
 		HumanA(std::string name, Weapon& weapon);
 		~HumanA();
+		HumanA &operator=(const HumanA &other);
+		HumanA(const HumanA &other);
 		void attack();
 };
 

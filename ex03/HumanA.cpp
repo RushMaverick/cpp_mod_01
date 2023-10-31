@@ -11,3 +11,12 @@ HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon){
 HumanA::~HumanA() {
 
 }
+
+HumanA &HumanA::operator=(const HumanA &other){
+	_name = other._name;
+	_weapon = other._weapon;
+}
+
+HumanA::HumanA(const HumanA &other) : _weapon(other._weapon) {
+	*this = other;
+}

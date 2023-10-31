@@ -6,7 +6,7 @@
 /*   By: rrask <rrask@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:22:41 by rrask             #+#    #+#             */
-/*   Updated: 2023/10/17 16:35:06 by rrask            ###   ########.fr       */
+/*   Updated: 2023/10/26 10:23:14 by rrask            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Zombie {
 	public:
 		void announce( void ) const;
 		Zombie(std::string name);
+		Zombie(const Zombie &other);
+		Zombie &operator=(const Zombie &other);
 		~Zombie();
 	private:
 		std::string _name;

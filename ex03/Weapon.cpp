@@ -14,3 +14,11 @@ Weapon::Weapon(std::string name) : _type(name){
 Weapon::~Weapon() {
 	
 }
+
+Weapon::Weapon(const Weapon &other) {
+	_type = other._type;
+}
+
+Weapon &Weapon::operator=(const Weapon &other) {
+	*this = other;
+}
