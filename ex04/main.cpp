@@ -5,10 +5,33 @@ int main (int argc, char **argv) {
 		std::cout << "Too few arguments. >> (<filename>, stringToReplace, stringToReplaceWith)" << std::endl;
 		return 0;
 	}
-	// Open argv[1] using std::ifstream inFile(argv[1])
-	// if inFile fails, tell user to fuck off
-	//
-	// find all occurences of s1 in argv[1]
+	std::ifstream inFile(argv[1]);
+	if (!inFile) {
+		std::cout << "Error opening file. Check filename and try again." << std::endl;
+		return 0;
+	}
+	std::string s1 = argv[2];
+	std::string s2 = argv[3];
+	std::string line;
+	size_t index = 0;
+	size_t pos = 0;
+	std::ofstream outFile(argv[1] + std::string(".replace"));
+	if (!outFile) {
+		std::cout << "Error opening file. Check filename and try again." << std::endl;
+		return 0;
+	}
+	while (std::getline(inFile, line)) {
+		if (index == line.find(s1, pos) != std::string::npos) {
+			line.erase(index, s1.length());
+			line.insert(index, s2);
+			pos = index + s2.length();
+		}
+			outFile << line << std::endl;
+	}
+	std::cout << line << std::endl;
+	inFile.close();
+	outFile.close();
+
 	return 0;
 }
 
